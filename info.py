@@ -21,13 +21,13 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 USERNAME = environ.get('USERNAME', "https://telegram.me/af_mhakal")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002030723564'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+swpuQspBoVxiNjdl')
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001234567898').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002246848988').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "")
 
 DATABASE_NAME = environ.get('DATABASE_NAME', "TELEGRAM_BOT_INFO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002030723564'))
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/ccb9db43e62a2e524928e.jpg')
+QR_CODE = environ.get('QR_CODE', 'https://i.postimg.cc/t42NPd70/IMG-20240907-161902-922.jpg')
 START_IMG = environ.get('START_IMG', 'https://i.postimg.cc/T12HxYsm/28920a67-174f-4628-90f8-87e158c2662a.jpg')
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL','-1002145528334'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','-1002145528334'))
