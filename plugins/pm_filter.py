@@ -1,4 +1,4 @@
-from pm_filter import auto_filter
+
 import asyncio
 import re
 import math
@@ -43,12 +43,6 @@ async def pm_search(client, message):
             ]
         ),
         )
-         if len(message.command) == 2 and message.command[1].startswith('getfile'):
-            movies = message.command[1].split("-", 1)[1] 
-            movie = movies.replace('-',' ')
-            message.text = movie 
-            await auto_filter(client, message) 
-            return   
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def group_search(client, message):
     user_id = message.from_user.id if message.from_user else None
