@@ -159,12 +159,6 @@ async def start(client:Client, message):
                         await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
                             reply_markup=reply_markup,
                             parse_mode=enums.ParseMode.HTML)
-                            if len(message.command) == 2 and message.command[1].startswith('getfile'):
-            movies = message.command[1].split("-", 1)[1] 
-            movie = movies.replace('-',' ')
-            message.text = movie 
-            await auto_filter(client, message) 
-            return
                 try: 
                     if newPoint == 0:
                         await client.send_message(refUserId , script.REF_PREMEUM.format(PREMIUM_POINT))
@@ -197,12 +191,6 @@ async def start(client:Client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-                if len(message.command) == 2 and message.command[1].startswith('getfile'):
-            movies = message.command[1].split("-", 1)[1] 
-            movie = movies.replace('-',' ')
-            message.text = movie 
-            await auto_filter(client, message) 
-            return
     if AUTH_CHANNEL and not await is_req_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
@@ -256,13 +244,7 @@ async def start(client:Client, message):
         return await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )
-            if len(message.command) == 2 and message.command[1].startswith('getfile'):
-            movies = message.command[1].split("-", 1)[1] 
-            movie = movies.replace('-',' ')
-            message.text = movie 
-            await auto_filter(client, message) 
-            return    
+                                        )
     if data.startswith('pm_mode_'):
         pm_mode = True
         data = data.replace('pm_mode_', '')
