@@ -4,7 +4,7 @@ import random
 import asyncio
 import string
 import pytz
-from pm_filter import auto_filter
+from .pm_filter import auto_filter
 from datetime import timedelta
 from datetime import datetime as dt
 from Script import script
@@ -245,12 +245,13 @@ async def start(client:Client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
                                         )
-        if len(message.command) == 2 and message.command[1].startswith('getfile'):
-            movies = message.command[1].split("-", 1)[1] 
-            movie = movies.replace('-',' ')
-            message.text = movie 
-            await auto_filter(client, message) 
-            return
+    if len(message.command) == 2 and message.command[1].startswith('getfile'):
+        movies = message.command[1].split("-", 1)[1] 
+        movie = movies.replace('-',' ')
+        message.text = movie 
+        await auto_filter(client, message) 
+        return
+        
     if data.startswith('pm_mode_'):
         pm_mode = True
         data = data.replace('pm_mode_', '')
