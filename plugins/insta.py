@@ -19,13 +19,13 @@ async def link_handler(Mbot, message):
     link = message.matches[0].group(0)
     global headers
     try:
-        m = await message.reply_sticker("CAACAgUAAxkBAAJwgmYsfgvGbfH7xYqlNzyFsMSOpPdXAAIGBwACc7LBVBHH8bMK6dZAHgQ")
+        m = await message.reply_sticker("CAACAgUAAxkBAAKC7WcMwWmuaygDD-yW-FDBXBXdwEnIAAJ0DgACNtpoVLRXA392COiENgQ")
         url= link.replace("instagram.com","ddinstagram.com")
         url=url.replace("==","%3D%3D")
         if url.endswith("="):
-           dump_file=await message.reply_video(url[:-1],caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 [@Deendayal_dhakad]")
+           dump_file=await message.reply_video(url[:-1],caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 [@AF_Mhakal]")
         else:
-            dump_file=await message.reply_video(url,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 [@Deendayal_dhakad]")
+            dump_file=await message.reply_video(url,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 [@AF_Mhakal]")
         if 'dump_file' in locals():
            await dump_file.forward(DUMP_GROUP)
         await m.delete()
@@ -54,9 +54,9 @@ async def link_handler(Mbot, message):
                       return await message.reply("oops something went wrong")
                try:
                    if ddinsta:
-                      dump_file=await message.reply_video(content_value,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @Deendayal_dhakad")
+                      dump_file=await message.reply_video(content_value,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @AF_Mhakal")
                    else:
-                       dump_file=await message.reply_video(content_value, caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @Deendayal_dhakad")
+                       dump_file=await message.reply_video(content_value, caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @AF_Mhakal")
                except:
                    downfile=f"{os.getcwd()}/{random.randint(1,10000000)}"
                    with open(downfile,'wb') as x:
@@ -75,7 +75,7 @@ async def link_handler(Mbot, message):
                      com=await message.reply_text(meta[i])
                      await asyncio.sleep(1)
                      try:
-                        dump_file=await message.reply_video(com.text,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @Deendayal_dhakad")
+                        dump_file=await message.reply_video(com.text,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @AF_Mhakal")
                         await com.delete()
                      except:
                          pass 
@@ -87,12 +87,12 @@ async def link_handler(Mbot, message):
                   else:
                       return await message.reply("Oops something went wrong")
                   try:
-                     dump_file=await message.reply_video(meta[0], caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @Deendayal_dhakad")
+                     dump_file=await message.reply_video(meta[0], caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @AF_Mhakal")
                   except:
                       com=await message.reply(meta[0])
                       await asyncio.sleep(1)
                       try:
-                          dump_file=await message.reply_video(com.text,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @Deendayal_dhakad")
+                          dump_file=await message.reply_video(com.text,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @AF_Mhakal")
                           await com.delete()
                       except:
                           pass
@@ -115,5 +115,5 @@ async def link_handler(Mbot, message):
             await m.delete()
             if 'downfile' in locals():
                 os.remove(downfile)
-            await message.reply("<a href='https://t.me/Deendayal_dhakad'>Deendayal_dhakad</a>")
+            await message.reply("<a href='https://t.me/AF_Mhakal'>AF Mhakal</a>")
 
