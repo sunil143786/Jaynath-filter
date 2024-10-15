@@ -54,7 +54,7 @@ async def link_handler(Mbot, message):
                       return await message.reply("oops something went wrong")
                try:
                    if ddinsta:
-                      dump_file=await message.reply_video(content_value,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @tropical")
+                      dump_file=await message.reply_video(content_value,caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 User ID: <code>{user_id}{user.mention}")
                    else:
                        dump_file=await message.reply_video(content_value, caption="𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑 𝐵𝑦 👉 @venox")
                except:
