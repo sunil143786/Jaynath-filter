@@ -24,6 +24,13 @@ MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+swpuQspBoVxiNj
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002246848988').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "")
 
+   # info.py
+   ADMINS = [...]
+   LOG_CHANNEL = "-1002030723564"
+   FILE_STORE_CHANNEL = "-1002030723564"  # Make sure this line exists
+   PUBLIC_FILE_STORE = "-1002030723564"
+   
+
 DATABASE_NAME = environ.get('DATABASE_NAME', "TELEGRAM_BOT_INFO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002030723564'))
