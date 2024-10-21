@@ -16,7 +16,7 @@ async def autoapprove(client, message: ChatJoinRequest):
         buttons = [
             [InlineKeyboardButton('• ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜ ɢʀᴏᴜᴘ 😍 •', url=f'https://t.me/+swpuQspBoVxiNjdl')
             ],
-            [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url=f'https://t.me/af_mallu')
+            [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url=f'https://telegram.me/Reelify_Bot?start=getfile')
             
             ]]
         
