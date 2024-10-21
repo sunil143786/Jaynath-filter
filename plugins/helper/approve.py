@@ -13,11 +13,13 @@ async def autoapprove(client, message: ChatJoinRequest):
     print(f"{user.first_name} Joined") 
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
     if APPROVED == "on":
-        buttons = [[ 
-            [InlineKeyboardButton('• ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜ ɢʀᴏᴜᴘ 😍 •', url=f'https://t.me/+swpuQspBoVxiNjdl')],
-            [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url=f'https://t.me/af_mallu')]
+        buttons = [
+            [InlineKeyboardButton('• ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜ ɢʀᴏᴜᴘ 😍 •', url=f'https://t.me/+swpuQspBoVxiNjdl')
+            ],
+            [InlineKeyboardButton('• ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs •', url=f'https://t.me/af_mallu')
             
-        ]]
+            ]]
+        
         markup = InlineKeyboardMarkup(buttons)
         caption = f"<b>ʜᴇʏ {message.from_user.mention()},\n\n ʙᴀʙʏ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {message.chat.title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.</b>"
         await client.send_photo(
