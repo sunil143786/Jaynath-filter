@@ -801,17 +801,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )      
     elif query.data == "features":
         buttons = [[
-            InlineKeyboardButton('📸 ᴛ-ɢʀᴀᴘʜ', callback_data='telegraph'),
-            InlineKeyboardButton('🆎️ ғᴏɴᴛ', callback_data='font')    
+            InlineKeyboardButton('ᴛ-ɢʀᴀᴘʜ 📸', callback_data='telegraph'),
+            InlineKeyboardButton('ғᴏɴᴛ 🆎️', callback_data='font')    
         ],
         [
-          InlineKeyboardButton('🔐 ғsᴜʙ', callback_data='fsub'),
-          InlineKeyboardButton('🗣️ ᴀɪ ᴛᴛs', callback_data='tts')],
+          InlineKeyboardButton('ғsᴜʙ 🏷️', callback_data='fsub'),
+          InlineKeyboardButton('ᴀɪ ᴛᴛs 🗣️', callback_data='tts')],
 		 [
-          InlineKeyboardButton(' ғsᴜʙ', callback_data='insta'),
-          InlineKeyboardButton('ᴀɪ ᴛᴛs', callback_data='approve')],  
+          InlineKeyboardButton(' ɪɴsᴛᴀ🖤⃝🦋', callback_data='insta'),
+          InlineKeyboardButton('ᴀᴘᴘʀᴏᴠᴇ 💫', callback_data='approve')],  
 		   [
-        InlineKeyboardButton('ᴀᴅᴍɪɴ ᴄᴍᴅ', callback_data='admincmd'),
+        InlineKeyboardButton('ᴀᴅᴍɪɴ ᴄᴍᴅ 🪄', callback_data='admincmd'),
 	    InlineKeyboardButton('⇋ ʜᴏᴍᴇ', callback_data='start')
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
