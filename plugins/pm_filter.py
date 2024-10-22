@@ -806,7 +806,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton('🔐 ғsᴜʙ', callback_data='fsub'),
-          InlineKeyboardButton('🗣️ ᴀɪ ᴛᴛs', callback_data='tts')],[
+          InlineKeyboardButton('🗣️ ᴀɪ ᴛᴛs', callback_data='tts')],
+		 [
+          InlineKeyboardButton(' ғsᴜʙ', callback_data='insta'),
+          InlineKeyboardButton('ᴀɪ ᴛᴛs', callback_data='approve')],  
+		   [
         InlineKeyboardButton('ᴀᴅᴍɪɴ ᴄᴍᴅ', callback_data='admincmd'),
 	    InlineKeyboardButton('⇋ ʜᴏᴍᴇ', callback_data='start')
         ]] 
@@ -849,6 +853,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "insta":
+        buttons = [[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)  
+        await query.message.edit_text(
+            text=script.INSTA,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "approve":
+        buttons = [[
+            InlineKeyboardButton('⋞ ʙᴀᴄᴋ', callback_data='features')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)  
+        await query.message.edit_text(
+            text=script.APPROVE,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+	)    
     elif query.data == 'about':
         await query.message.edit_text(
             script.ABOUT_TEXT.format(query.from_user.mention(),temp.B_LINK),
