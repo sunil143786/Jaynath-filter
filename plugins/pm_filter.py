@@ -37,7 +37,7 @@ async def pm_search(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "📝 ᴍᴏᴠɪᴇ ꜱᴇᴀʀᴄʜ ɢʀᴏᴜᴘ✨", url='https://t.me/+swpuQspBoVxiNjdl'
+                        "📝 ᴍᴏᴠɪᴇ ꜱᴇᴀʀᴄʜ ɢʀᴏᴜᴘ✨", url='https://t.me/+Y4ZB2n1HOHQ1NDE1'
                     )
                 ]
             ]
