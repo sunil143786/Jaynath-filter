@@ -15,7 +15,7 @@ def is_enabled(value, default):
 #main variables
 API_ID = int(environ.get('API_ID', '19341831'))
 API_HASH = environ.get('API_HASH', 'd5dd7d867fc35ae9fa59c54e54d218ad')
-BOT_TOKEN = environ.get('BOT_TOKEN', '7443691584:AAEkoIrzFbNrYxwvs45LSo3OzhPs-agE-Kg')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7264813509:AAEJEUASppIKanAmD6LB7x3iwOftM7BkuVk')
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1076927614 1086049246').split()]
 USERNAME = environ.get('USERNAME', "https://telegram.me/filmcity4youu")
@@ -24,8 +24,8 @@ MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/Filmcity_Reques
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002055127272').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Userakv:Akv@cluster0.btlemtq.mongodb.net/?retryWrites=true&w=majority")
 
-DATABASE_NAME = environ.get('DATABASE_NAME', "TELEGRAM_BOT_INFO")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Bisal')
+DATABASE_NAME = environ.get('DATABASE_NAME', "Safari")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002193397974'))
 QR_CODE = environ.get('QR_CODE', 'https://i.postimg.cc/t42NPd70/IMG-20240907-161902-922.jpg')
 START_IMG = environ.get('START_IMG', 'https://i.postimg.cc/T12HxYsm/28920a67-174f-4628-90f8-87e158c2662a.jpg')
