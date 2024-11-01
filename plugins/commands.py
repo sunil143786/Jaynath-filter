@@ -129,60 +129,46 @@ async def start(client:Client, message):
             await db.add_chat(message.chat.id, message.chat.title)
         return 
     if not await db.is_user_exist(message.from_user.id):
-    await db.add_user(message.from_user.id, message.from_user.first_name)
-    await client.send_message(LOG_CHANNEL, script.NEW_USER_TXT.format(temp.B_LINK, message.from_user.id, message.from_user.mention))
-    
-    try:
-        if len(message.command) > 1:
+        await db.add_user(message.from_user.id, message.from_user.first_name)
+        await client.send_message(LOG_CHANNEL, script.NEW_USER_TXT.format(temp.B_LINK, message.from_user.id, message.from_user.mention))
+        try: 
             refData = message.command[1]
             if refData and refData.split("-", 1)[0] == "biisal":
                 Fullref = refData.split("-", 1)
                 refUserId = int(Fullref[1])
                 await db.update_point(refUserId)
                 newPoint = await db.get_point(refUserId)
-                
                 if AUTH_CHANNEL and await is_req_subscribed(client, message):
-                    buttons = [
-                        [
+                        buttons = [[
                             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-                        ],
-                        [
+                            ],[
                             InlineKeyboardButton('⚙ ꜰᴇᴀᴛᴜʀᴇs', callback_data='features'),
-                            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='premium')
-                        ],
-                        [
+                            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='premium'),
+                            ],
+                            [
                             InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
-                        ],
-                        [
+                            ],
+                            [
                             InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
                             InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🚩', callback_data='about')
-                        ],
-                        [
+                            ],
+                            [
                             InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🤡', callback_data='earn')
-                        ]
-                    ]
-                    reply_markup = InlineKeyboardMarkup(buttons)
-                    await message.reply_photo(
-                        photo=START_IMG,
-                        caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
-                        reply_markup=reply_markup,
-                        parse_mode=enums.ParseMode.HTML
-                    )
-                
+                            ]]
+                        reply_markup = InlineKeyboardMarkup(buttons)
+                        await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
+                            reply_markup=reply_markup,
+                            parse_mode=enums.ParseMode.HTML)
                 try: 
                     if newPoint == 0:
-                        await client.send_message(refUserId, script.REF_PREMEUM.format(PREMIUM_POINT))
-                    else:
-                        await client.send_message(refUserId, script.REF_START.format(message.from_user.mention, newPoint))
-                except Exception as e:
-                    traceback.print_exc()
-    except Exception as e:
-        traceback.print_exc()
-
-# Check if message.command length is exactly 2
-if len(message.command) != 2:
-    # Additional code here
-
+                        await client.send_message(refUserId , script.REF_PREMEUM.format(PREMIUM_POINT))
+                    else: 
+                        await client.send_message(refUserId , script.REF_START.format(message.from_user.mention() , newPoint))
+                except : pass
+        except Exception as e:
+            traceback.print_exc()
+            pass
+    if len(message.command) != 2:
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ],[
