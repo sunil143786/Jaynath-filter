@@ -110,9 +110,7 @@ User - {}"""
     FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}</b>
 
 <b> Size ⚙️: {file_size}
-○Jᴏɪɴ :<a href="https://t.me/AF_Mhakal">Cʜᴀɴɴᴇʟ</a>
-○Mᴏᴠɪᴇ : :<a href="https://t.me/AF_Mhakal">Gʀᴏᴜᴘ</a>
-</b>""" 
+""" 
 
     RESTART_TXT = """<b>
 📅 Dᴀᴛᴇ : <code>{}</code>
