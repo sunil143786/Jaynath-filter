@@ -315,8 +315,8 @@ async def start(client:Client, message):
             ]]
             toDel = await client.send_cached_media(
                 chat_id=message.from_user.id,
-                file_id=file.file_id
-                caption=f_caption,
+                file_id=file.file_id,
+                caption=f_caption
                 #reply_markup=InlineKeyboardMarkup(btn)
             )
             files_to_delete.append(toDel)
