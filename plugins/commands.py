@@ -8,6 +8,7 @@ from .pm_filter import auto_filter
 from datetime import timedelta
 from datetime import datetime as dt
 from Script import script
+from .pm_filter import auto_filter
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , ForceReply
@@ -222,7 +223,12 @@ async def start(client:Client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-
+    if message.command[1].startswith('getfile'):
+        data = message.command[1].split("-", 1)
+        file_name = data[1].replace('-', ' ')
+        message.text = file_name 
+        await auto_filter(client, message)
+        return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
