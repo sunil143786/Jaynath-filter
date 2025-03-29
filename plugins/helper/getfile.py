@@ -1,5 +1,3 @@
-# This code has been modified by @Safaridev
-# Please do not remove this credit
 from pyrogram import filters, Client, enums
 import bs4, requests, re, asyncio
 import os, traceback, random
