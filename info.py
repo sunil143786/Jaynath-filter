@@ -15,14 +15,14 @@ def is_enabled(value, default):
 #main variabless
 API_ID = int(environ.get('API_ID', '19341831'))
 API_HASH = environ.get('API_HASH', 'd5dd7d867fc35ae9fa59c54e54d218ad')
-BOT_TOKEN = environ.get('BOT_TOKEN', '7264813509:AAHc6hCg9--VBaY2tubAm1MTTB2GoerJuK4')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1076927614 1086049246').split()]
 USERNAME = environ.get('USERNAME', "https://telegram.me/filmcity4youu")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002193397974'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/Filmcity_Request')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002211425646').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Akv175:Akv3@cluster0.nm7qk.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 
 DATABASE_NAME = environ.get('DATABASE_NAME', "i3DBOT")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telefiles')
