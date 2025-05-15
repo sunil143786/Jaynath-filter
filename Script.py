@@ -140,7 +140,7 @@ User - {}"""
 <code>/font hi how are you</code></b>"""
 
     
-    PREMIUM_TEXT = """ It's a test bot."""
+    PREMIUM_TEXT = """ It's a Public bot."""
 
     BUY_PLAN = """यह एक Public Bot हैं ।"""
     PLAN_TEXT = """यह एक Public Bot 🤖 हैं।"""
