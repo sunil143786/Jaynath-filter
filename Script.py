@@ -36,7 +36,8 @@ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇ ᴀɴᴅ 
     TTS_TXT="""
 <b>• sᴇɴᴅ /tts ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ</b>"""
 
-    ABOUT_TEXT = """ यह एक Public Bot 🤖 है ।
+    ABOUT_TEXT = """ यह एक Public Bot 🤖 है प्रीमियम के लिए यहा Contact 
+@Jaynath_Request_Group_bot ।
     It's a test Bot """
     SUPPORT_GRP_MOVIE_TEXT = '''<b>ʜᴇʏ {}
 
@@ -142,9 +143,12 @@ User - {}"""
     
     PREMIUM_TEXT = """ It's a Public bot."""
 
-    BUY_PLAN = """यह एक Public Bot हैं ।"""
-    PLAN_TEXT = """यह एक Public Bot 🤖 हैं।"""
-    EARN_TEXT = """यह एक Public Bot 🤖 हैं। """
+    BUY_PLAN = """यह एक Public Bot हैं प्रीमियम के लिए यहा Contact 
+@Jaynath_Request_Group_bot ।"""
+    PLAN_TEXT = """यह एक Public Bot 🤖 हैं प्रीमियम के लिए यहा Contact 
+@Jaynath_Request_Group_bot ।"""
+    EARN_TEXT = """यह एक Public Bot 🤖 हैं प्रीमियम के लिए यहा Contact 
+@Jaynath_Request_Group_bot । """
 
     VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {} {},
 
