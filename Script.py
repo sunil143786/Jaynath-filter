@@ -141,7 +141,8 @@ User - {}"""
 <code>/font hi how are you</code></b>"""
 
     
-    PREMIUM_TEXT = """ It's a Public bot."""
+    PREMIUM_TEXT = """ It's a Public bot प्रीमियम के लिए यहा Contact 
+@Jaynath_Request_Group_bot ."""
 
     BUY_PLAN = """यह एक Public Bot हैं प्रीमियम के लिए यहा Contact 
 @Jaynath_Request_Group_bot ।"""
